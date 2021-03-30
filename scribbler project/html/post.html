@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/post.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link href='https://fonts.googleapis.com/css?family=Marck+Script|Satisfy' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+      
+    </head>
+    <body>
+        <!--Header-->
+<div class="header">
+    <input type="button" value="Sign Up" id="signUp" class="headerBtns btns">
+    <input type="button" value="Sign In" id="signIn" class="headerBtns btns">
+    <a id="title" class="logo">ScriBBler</a>
+    <p class="catchphrase">Explore, Imagine, Create</p>
+</div>
+<!--Sign in modal-->
+<div id="signInModal" class="modal">
+    <div class="modal-content">
+        <span id="signInClose"class="close">&times;</span>
+        <h1 class="a">Welcome Back!</h1>
+        <hr>
+        <form>
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" required>
+                <button type="submit" class="signInBtn">Sign In</button>
+                <p class="x">Not a member? <span class="c" onclick="signUp()">Sign Up</span></p>
+            </div>
+        </form>
+    </div>
+</div>
+<!--Sign Up modal-->
+<div id="signUpModal" class="modal">
+    <div class="modal-content">
+        <span id="signUpClose"class="close">&times;</span>
+        <h1>Get Started</h1>
+        <hr>
+        <form>
+            <div class="container">
+                <label><b>Full Name</b></label>
+                <input type="text" placeholder="Enter Full Name" required>
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" required>
+                <label><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="signUpBtn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="postcontainer">
+    <p id="postheading">The legacy of Elon musk</p>
+    <!--input field for editing part -->
+    <input type="text" id="editing">
+    <div class="nameEdit">
+        <p id="name">Elon musk</p>
+        <button id="edit" onclick="editPost()">Edit <img src="https://img.icons8.com/metro/15/ffffff/edit-property.png"/></button>
+        <button id="save" onclick="savePost()">Save <img src="https://img.icons8.com/ios-filled/15/ffffff/save--v1.png"/></button>
+    </div>
+    <p id="post">Elon Musk has been the Ceo of a few other companies. Some of these include: Paypal, Zip2 (now merged with another company), and SolarCity. But, working for all of these companies, he must have seen one of these companies fall into trouble.
+                Though you may not know about it, Tesla Motors has had a very, very turbulent past:
+                 It all began with their first car: the Roadster. It was created with money from private investors.The Roadster used the shell of the legendary Lotus Elise. Around this time (2004), Elon Musk made his rounds and gathered sufficient funds to start manufacturing the car. Three years later in 2007, the company was on the verge of bankruptcy. They were eating up tons of money but were not able to replenish their supplies. When a new CEO took his chair, 10% of all the employees at Tesla were laid off only to make the company profitable again. This CEO left before a year past. So, in 2008, Musk took office. He had poured a lot of money into the company himself. The next four years were hard for the company: they had many cars to deliver but not much time. They kept delaying delivery times to compensate for all of this. The Model S is released this year and really got people excited. Because of its rising popularity, Tesla is able to take a loan from the U.S government. Though it was large, it was payed back a full nine years early. Tesla decides to go public, trading on NASDAQ as TSLA and raising millions from its IPO. Fast forward a few years and we have the Model X, an “insanely” fast SUV. They started implementing their fast charging stations that were free for all Model S owners. Now, their Model 3 has been released.</p>
+    
+    <textarea id="postedit"></textarea>
+    <button id="like" onclick="likePost()"><img src="https://img.icons8.com/fluent-systems-filled/20/ffffff/facebook-like.png"/>Like</button>
+    <p id="likes">Be first one to like this!</p>
+    <textarea id="comments" placeholder="Leave a comment..."></textarea><br>
+    <button id="commentButton" onclick="postComment()">Comment</button>
+    <h3 id="commentHeading">All Comments</h3>
+    <div id="allComment">
+
+    </div>
+</div>
+<script src="../scripts/post.js"></script>
+<script src="../scripts/header.js"></script>
+    </body>
+</html>
